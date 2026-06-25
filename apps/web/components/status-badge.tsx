@@ -1,0 +1,2 @@
+const colors: Record<string,string> = { active:'bg-green-100 text-green-800', genuine:'bg-green-100 text-green-800', open:'bg-red-100 text-red-800', critical:'bg-red-100 text-red-800', high:'bg-orange-100 text-orange-800', medium:'bg-yellow-100 text-yellow-800', recalled:'bg-red-100 text-red-800', expired:'bg-orange-100 text-orange-800', resolved:'bg-green-100 text-green-800' };
+export function StatusBadge({ value }: { value: string }) { return <span className={'rounded-full px-2 py-1 text-xs font-medium ' + (colors[value] ?? 'bg-slate-100 text-slate-700')}>{value}</span>; }

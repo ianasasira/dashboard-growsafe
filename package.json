@@ -1,0 +1,16 @@
+{
+  "name": "growsafe",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @growsafe/api & npm run dev -w @growsafe/web",
+    "build": "npm run build -w @growsafe/api && npm run build -w @growsafe/web",
+    "lint": "npm run lint -w @growsafe/api && npm run lint -w @growsafe/web",
+    "db:migrate": "npm run db:migrate -w @growsafe/api",
+    "db:seed": "npm run db:seed -w @growsafe/api"
+  }
+}
